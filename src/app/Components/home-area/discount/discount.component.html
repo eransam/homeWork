@@ -1,0 +1,10 @@
+<div class="box">
+
+    <!-- פה אנו מחילים את תנאי הif אשר במידה ותנאי זה הוא אמת אז הטקסט שבפסקה יכתב -->
+    <!--ובמידה והתנאי יהיה שקר אנו נעבור לפקודת ה other_content ומה שיהיה בתוך הפיסקה שלמטה יכתב -->
+    <p *ngIf="isWeekend();else other_content">today: 10% off on all the socks
+    </p>
+    
+    <ng-template #other_content>no discount today...</ng-template>
+
+</div>

@@ -1,0 +1,33 @@
+<div class="box" *ngIf="employees">
+
+    <form [formGroup]="employeesForm" (ngSubmit)="update()">
+
+        <h2>Edit Employees</h2>
+
+        <label>firstName: </label>
+        <input type="text" [formControl]="firstNameInput">
+
+        <label>lastName: </label>
+        <input type="text" [formControl]="lastNameInput">
+
+        <label>title: </label>
+        <input type="text" [formControl]="titleInput">
+
+        <label>country: </label>
+        <input type="text" [formControl]="countryInput">
+
+
+        <label>city: </label>
+        <input type="text" [formControl]="cityInput">
+
+        <label>birthDate: </label>
+        <input type="text" [formControl]="birthDateInput">
+
+        <label>Image: </label>
+        <input type="file" [formControl]="imageInput" #imageBox>
+
+        <button>Update</button>
+
+    </form>
+
+</div>

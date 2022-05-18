@@ -1,0 +1,17 @@
+<div class="box" [ngStyle]="{backgroundColor: randomColor}">
+    <p>
+        <label>what is your name:
+            <br />
+            *and if u want to change the background to red u have to write  "red" </label>
+            <br /><br />
+        <!--פה אנו יוצרים תיבת טקסט ואת הערך שהוכנס לתיבה אנו עוטפים ב[()] שזה נקרא-->
+        <!-- two-way binding -->
+        <!--שזה בעצם קובע את ערכו החדש של המשתנה גם פה בקובץ הhtml וגם במשתנה הזה בקובץ הts-->
+        <input type="text" [(ngModel)]="item" />
+        <!--פה אנו יוצרים כפתור שבאיבנט click  יפעיל את הפונ' המוזכרת-->
+        <button (click)="makeOrder()">send</button>
+        <br />
+        <!--פה אנו נציד בתגית ה span  את ערך המשתנה item שלנו-->
+        <span>{{item}}</span>
+    </p>
+</div>

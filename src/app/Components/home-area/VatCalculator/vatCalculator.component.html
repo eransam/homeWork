@@ -1,0 +1,17 @@
+<div class="box">
+    <p>
+        <label>enter price and see the vat</label>
+            <br />
+        <!--פה אנו יוצרים תיבת טקסט ואת הערך שהוכנס לתיבה אנו עוטפים ב[()] שזה נקרא-->
+        <!-- two-way binding -->
+        <!--שזה בעצם קובע את ערכו החדש של המשתנה גם פה בקובץ הhtml וגם במשתנה הזה בקובץ הts-->
+        <input type="num" [(ngModel)]="priceFromTheClaint"/>
+        <button (click)="getVatAndNum()">send</button>
+                <!--פה אנו יוצרים כפתור שבאיבנט click  יפעיל את הפונ' המוזכרת-->
+        <br />
+        <!--פה אנו נציד בתגית ה span  את ערך המשתנה item שלנו-->
+        <span>Price including VAT: {{priceWithVat}}</span>
+        <br />
+        <span>The VAT of the price is: {{TheVat}}</span>
+    </p>
+</div>

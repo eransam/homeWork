@@ -1,0 +1,16 @@
+<div class="box">
+
+    <h3>Testing Observable</h3>
+    enter min number: <input type="number" [(ngModel)]="min">
+    <br />
+    enter max number: <input type="number" [(ngModel)]="max">
+    <br />
+    show just even numbers: <input type="checkbox" id="" name="" value="" [(ngModel)]="checkbox">
+    <br />
+    <button (click)="start()">Start</button>
+    <button (click)="ngOnDestroy()">stop</button>
+
+
+    <span *ngFor="let n of arr">{{n}} | </span>
+
+</div>

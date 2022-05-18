@@ -1,0 +1,23 @@
+<div class="box" *ngIf="employees">
+
+    <h3>firstName: {{employees.firstName}}</h3>
+
+    <h3>lastName: {{employees.lastName}}</h3>
+
+    <h3>title: {{employees.title}}</h3>
+
+    <h3>city: {{employees.city}}</h3>
+
+    <h3>country: {{employees.country}}</h3>
+
+    <img [src]="EmployeesImagesUrl + employees.imageName" />
+    <br>
+
+
+    <a routerLink="/employees">Back to List</a>
+    <span> | </span>
+    <a routerLink="/employees/edit/{{employees.id}}">Edit</a>
+    <span> | </span>
+    <a href="javascript:void(0)" (click)="deleteEmployees()">Delete</a>
+
+</div>

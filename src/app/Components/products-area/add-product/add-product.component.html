@@ -1,0 +1,31 @@
+<div class="box">
+
+    <form (ngSubmit)="add()" #formInfo="ngForm">
+
+        <h2>Add Product</h2>
+
+        <label>Name: </label>
+        <input type="text" name="name" [(ngModel)]="product.name" required minlength="3" #nameBox="ngModel">
+        <span *ngIf="nameBox.touched && nameBox.errors?.['required']">Missing name</span>
+        <span *ngIf="nameBox.touched && nameBox.errors?.['minlength']">Name too short</span>
+
+        <label>Price: </label>
+        <input type="number" name="price" [(ngModel)]="product.price" step="0.01" required min="0" max="1000" #priceBox="ngModel">
+        <span *ngIf="priceBox.touched && priceBox.errors?.['required']">Missing price</span>
+        <span *ngIf="priceBox.touched && priceBox.errors?.['min']">Price can't be negative</span>
+        <span *ngIf="priceBox.touched && priceBox.errors?.['max']">Price can't exceed 1000</span>
+
+        <label>Stock: </label>
+        <input type="number" name="stock" [(ngModel)]="product.stock" required min="0" max="10000" #stockBox="ngModel">
+        <span *ngIf="stockBox.touched && stockBox.errors?.['required']">Missing stock</span>
+        <span *ngIf="stockBox.touched && stockBox.errors?.['min']">Stock can't be negative</span>
+        <span *ngIf="stockBox.touched && stockBox.errors?.['max']">Stock can't exceed 10000</span>
+
+        <label>Image: </label>
+        <input type="file" name="image" #imageBox>
+
+        <button [disabled]="formInfo.invalid">Add</button>
+
+    </form>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="box">
+    <div>
+        {{employees.firstName}}
+        <br />
+        {{employees.lastName}}
+        <br />
+        {{employees.title}}
+        <br />
+        {{employees.city}}
+        <br />
+        {{employees.country}}
+        <br />
+    </div>
+    <div>
+        <a routerLink="/employees/details/{{employees.id}}">
+            <img [src]="employeesImagesUrl + employees.imageName" />
+        </a>
+    </div>
+</div>
